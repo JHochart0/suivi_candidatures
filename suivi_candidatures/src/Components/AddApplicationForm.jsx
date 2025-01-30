@@ -14,21 +14,18 @@ function AddApplicationForm(props) {
     //function to handle informations when the user submits the form
     const handleSubmit = (e) =>{
         e.preventDefault();
-
+        
         //creating the new application object
         const newApplication = {
             structureName,
             title,
+            applicationDate: applicationDate || 'Non renseignée', // if the used didn't give a date, we put it to "non renseignée"
             link,
             location,
             status: 'waiting' // default status
         };
 
-        // if the date is given, we add it in the new application
-        if(applicationDate) {
-            newApplication.applicatioDate = applicationDate;
-        }
-
+        //adding the new application in the list
         addApplication(newApplication);
 
         // reset the form after adding
@@ -86,8 +83,9 @@ function AddApplicationForm(props) {
                     onChange={(e) => setLocation(e.target.value)}
                     required
                 />
-            </form>
+           
             <button type="submit">Ajouter la candidature</button>
+            </form>
         </div>
     );
 }
