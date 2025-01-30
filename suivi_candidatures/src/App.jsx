@@ -6,15 +6,13 @@ import About from './pages/About.jsx';
 import NotFound404 from './pages/NotFound404.jsx';
 import Navbar from './Components/Navbar.jsx';
 
-
 import './css/App.css';
 
-
+// Core of the website with all the routes
 function App() {
   return (
     <Router>
         <div className="App">
-            
             <Navbar />
             <div className="content">
                 <Routes>

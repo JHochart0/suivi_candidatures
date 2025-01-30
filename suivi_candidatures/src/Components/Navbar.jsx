@@ -1,13 +1,14 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import React from 'react';
+import NavLink from "./NavLink.jsx";
 
+//Component used for a navigation bar
 function Navbar() {
   return (
     <nav className="navbar">
         <h1 className="title">Suivi des candidatures</h1>
         <div className="links">
-            <Link className="homeLink" to="/">Accueil</Link>
-            <Link className="aboutLink" to="/about">À propos</Link>
+            <NavLink to="/" content="Accueil" id="homeLink"/>
+            <NavLink to="/about" content="À propos" id="aboutLink"/>
         </div>
     </nav>
   )

@@ -1,6 +1,8 @@
+/*About page*/
 .about{
-    padding:25px;
     text-align:center;
+    margin: 0px 25px;
+    padding-bottom:25px;
 }
 
 
