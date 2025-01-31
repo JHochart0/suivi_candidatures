@@ -229,27 +229,26 @@
 .updateDate button {
     position: relative;
     margin-left:5px;
-    padding: 3px;
+    padding: 5px;
     font-size: 0.9rem;
     cursor: pointer;
     background: none;
     border: 1.5px solid #ddd;
-    border-radius:7px;
+    border-radius: 5px;
     box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.2);
-    transition: color 0.2s ease, background-color 0.2s ease, transform 0.1s ease;
+    transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .updateDate button:hover {
     color: white;
     background-color: #357ABD;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .updateDate button:active {
     color: white;
     background-color: #2d6f97;
-    transform: scale(0.95);
-    transition: background-color 0.1s ease, transform 0.1s ease;
+    transform: scale(0.98);
 }
 
 .updateDate button:focus {
