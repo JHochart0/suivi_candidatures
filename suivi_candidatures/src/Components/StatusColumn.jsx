@@ -7,6 +7,7 @@ function StatusColumn(props) {
     const applications = props.applications;
     const status = props.status;
     const onDelete = props.onDelete;
+    const updateDate = props.updateDate;
 
     // Filtrage des candidatures selon leur statut (waiting, pending, rejected, accepted)
     const filteredApplications = applications.filter(application => application.status === status);
@@ -21,7 +22,7 @@ function StatusColumn(props) {
                             <Draggable key={application.id} draggableId={application.id.toString()} index={index}>
                                 {(provided) => (
                                     <div ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} className="applicationItemBox">
-                                        <ApplicationItem application={application} onDelete={onDelete}/>
+                                        <ApplicationItem application={application} onDelete={onDelete} updateDate={updateDate} />
                                     </div>
                                 )}
                             </Draggable>

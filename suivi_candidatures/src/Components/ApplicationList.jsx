@@ -6,6 +6,15 @@ function ApplicationList(props) {
     const applications = props.applications;
     const setApplications = props.setApplications;
 
+    //function used to update the date of an application
+    const updateDate = (id, newDate) =>{
+        setApplications((previousApps) =>
+            previousApps.map((application) =>
+                application.id === id ? {...application, applicationDate: newDate } : application
+            )
+        );
+    };
+
     //function used to delete an application when called
     const deleteApplication = (id) =>{
         const updatedApplications = applications.filter(application => application.id !==id);
@@ -31,10 +40,34 @@ function ApplicationList(props) {
         <DragDropContext onDragEnd={onDragEnd}>
             <div className="applicationList">
                 <div className="columns">
-                    <StatusColumn title="En attente de candidature" applications={applications} status="waiting" onDelete={deleteApplication} />
-                    <StatusColumn title="En attente de réponse" applications={applications} status="pending" onDelete={deleteApplication} />
-                    <StatusColumn title="Réponse négative" applications={applications} status="rejected" onDelete={deleteApplication} />
-                    <StatusColumn title="Réponse positive" applications={applications} status="accepted" onDelete={deleteApplication} />
+                    <StatusColumn 
+                        title="En attente de candidature" 
+                        applications={applications} 
+                        status="waiting" 
+                        onDelete={deleteApplication} 
+                        updateDate={updateDate}
+                    />
+                    <StatusColumn 
+                        title="En attente de réponse" 
+                        applications={applications} 
+                        status="pending" 
+                        onDelete={deleteApplication} 
+                        updateDate={updateDate}
+                    />
+                    <StatusColumn 
+                        title="Réponse négative" 
+                        applications={applications}
+                        status="rejected" 
+                        onDelete={deleteApplication} 
+                        updateDate={updateDate}
+                    />
+                    <StatusColumn 
+                        title="Réponse positive" 
+                        applications={applications} 
+                        status="accepted" 
+                        onDelete={deleteApplication} 
+                        updateDate={updateDate}
+                    />
                 </div>
                 
             </div>

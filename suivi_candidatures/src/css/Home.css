@@ -209,7 +209,7 @@
     background: none;
     border: none;
     font-size: 16px;
-    border-radius:20px;
+    border-radius:100%;
     color: gray;
     cursor: pointer;
     transition: color 0.2s ease, background-color 0.2s ease;
@@ -225,6 +225,43 @@
     background-color: red;
     transition: background-color 0.1s ease, color 0.1s ease;
 }
+
+.updateDate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.updateDate input {
+    padding: 5px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.updateDate input:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+.updateDate button {
+    padding: 2px 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #4A90E2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.updateDate button:hover {
+    background-color: #357ABD;
+    transform: scale(1.1);
+}
+
 
 /* adjustments for tablets*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
