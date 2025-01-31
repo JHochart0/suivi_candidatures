@@ -3,7 +3,10 @@ import { Draggable, Droppable } from "@hello-pangea/dnd";
 import ApplicationItem from "./ApplicationItem.jsx";
 
 function StatusColumn(props) {
-    const { title, applications, status } = props;
+    const title = props.title;
+    const applications = props.applications;
+    const status = props.status;
+    const onDelete = props.onDelete;
 
     // Filtrage des candidatures selon leur statut (waiting, pending, rejected, accepted)
     const filteredApplications = applications.filter(application => application.status === status);
@@ -18,7 +21,7 @@ function StatusColumn(props) {
                             <Draggable key={application.id} draggableId={application.id.toString()} index={index}>
                                 {(provided) => (
                                     <div ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} className="applicationItemBox">
-                                        <ApplicationItem application={application} />
+                                        <ApplicationItem application={application} onDelete={onDelete}/>
                                     </div>
                                 )}
                             </Draggable>
