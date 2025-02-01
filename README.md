@@ -11,3 +11,5 @@ Ensuite, vous pouvez organiser chaque candidature dans des colonnes en fonction 
 Vos candidatures seront ensuite sauvegardées en local sur votre appareil !
 
 Auteur : `Jovany Hochart`
+
+[Lien du site web](https://jhochart0.github.io/suivi_candidatures/)
