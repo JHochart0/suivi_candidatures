@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
@@ -11,7 +11,7 @@ import './css/App.css';
 // Core of the website with all the routes
 function App() {
   return (
-    <Router basename="/suivi_candidatures">
+    <Router>
         <div className="App">
             <Navbar />
             <div className="content">

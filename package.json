@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://JHochart0.github.io/suivi_candidatures",
+  "homepage": "https://JHochart0.github.io/suivi_candidatures/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
