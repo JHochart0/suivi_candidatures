@@ -11,7 +11,7 @@ import './css/App.css';
 // Core of the website with all the routes
 function App() {
   return (
-    <Router>
+    <Router basename="/suivi_candidatures">
         <div className="App">
             <Navbar />
             <div className="content">
