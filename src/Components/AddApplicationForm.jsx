@@ -63,6 +63,8 @@ function AddApplicationForm(props) {
                     type="date" 
                     id="dateInput"
                     value={applicationDate}
+                    min="0000-01-01" 
+                    max="9999-12-31"
                     onChange={(e) => setApplicationDate(e.target.value)}
                 />
                 <label htmlFor="linkInput">Lien de l'annonce / contact*</label>
