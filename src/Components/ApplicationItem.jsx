@@ -43,6 +43,8 @@ function ApplicationItem(props) {
                     <div className="updateDate">
                         <input
                             type="date"
+                            min="0000-01-01" 
+                            max="9999-12-31"
                             value={newDate}
                             onChange={handleDateChange}
                         />
