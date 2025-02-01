@@ -196,13 +196,13 @@
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-.applicationItem.removing {
+.applicationItem.removing{
     opacity: 0;
     transform: scale(0.9);
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.deleteApplication {
+.deleteApplication{
     position: absolute;
     top: 5px;
     right: 5px;
@@ -215,18 +215,18 @@
     transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-.deleteApplication:hover {
+.deleteApplication:hover{
     color: red;
     background-color:#adadad69;
 }
 
-.deleteApplication:active {
+.deleteApplication:active{
     color: white;
     background-color: red;
     transition: background-color 0.1s ease, color 0.1s ease;
 }
 
-.updateDate button {
+.updateDate button{
     position: relative;
     margin-left:5px;
     padding: 5px;

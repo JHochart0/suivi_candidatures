@@ -9,7 +9,7 @@ function StatusColumn(props) {
     const onDelete = props.onDelete;
     const updateDate = props.updateDate;
 
-    // Filtrage des candidatures selon leur statut (waiting, pending, rejected, accepted)
+    // Filtering application by their status (waiting, pending, rejected, accepted)
     const filteredApplications = applications.filter(application => application.status === status);
 
     return (

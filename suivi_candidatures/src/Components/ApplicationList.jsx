@@ -29,9 +29,9 @@ function ApplicationList(props) {
         if (!destination) return;
         if (destination.droppableId === source.droppableId) return;
 
-        setApplications(prevApps => {
-            return prevApps.map(app =>
-                app.id.toString() === draggableId ? { ...app, status: destination.droppableId } : app
+        setApplications(previousApplications => {
+            return previousApplications.map(application =>
+                application.id.toString() === draggableId ? { ...application, status: destination.droppableId } : application
             );
         });
     };
