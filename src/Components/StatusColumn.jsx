@@ -21,7 +21,7 @@ function StatusColumn(props) {
                         {filteredApplications.map((application, index) => (
                             <Draggable key={application.id} draggableId={application.id.toString()} index={index}>
                                 {(provided) => (
-                                    <div ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} className="applicationItemBox">
+                                    <div className="applicationItemBox" ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} >
                                         <ApplicationItem application={application} onDelete={onDelete} updateDate={updateDate} />
                                     </div>
                                 )}
